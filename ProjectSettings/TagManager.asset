@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projetil
+<<<<<<< HEAD
+  - Coletor
+=======
+>>>>>>> Elisa
   layers:
   - Default
   - TransparentFX
