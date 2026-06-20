@@ -5,10 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projetil
-<<<<<<< HEAD
   - Coletor
-=======
->>>>>>> Elisa
+  - Terreno
   layers:
   - Default
   - TransparentFX
