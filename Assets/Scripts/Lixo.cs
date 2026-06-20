@@ -31,20 +31,18 @@ public class Lixo : MonoBehaviour
         if (collision.gameObject.CompareTag("Projetil") && !isCollectable)
         {
             vida = vida - collision.gameObject.GetComponent<Projectile_logic>().dano;
-            if (vida <= 0)Destroy(this.gameObject);
+            if (vida <= 0){
+                Destroy(this.gameObject);
+                if (dropAmount > 0 && drop != null){
+                    for (int i = 0; i < dropAmount; i++)
+                        Instantiate(drop, tr.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
+                }
+            }
         }
         else if (collision.gameObject.CompareTag("Coletor") && isCollectable)
         {
             display.GetComponent<ContadorPNT>().pontos = display.GetComponent<ContadorPNT>().pontos + valor;
             Destroy(this.gameObject);
-        }
-    }
-
-    private void OnDestroy(){
-        if (dropAmount > 0 && drop != null)
-        {
-            for (int i = 0; i < dropAmount; i++)
-                Instantiate(drop, tr.position, Quaternion.Euler(0, 0, Random.Range(0, 360)));
         }
     }
 }
