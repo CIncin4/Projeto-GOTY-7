@@ -826,8 +826,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pontos
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 242aa5cdd56fed442bb2b47fd74fb8d6, type: 2}
-  m_sharedMaterial: {fileID: 1019850762607995201, guid: 242aa5cdd56fed442bb2b47fd74fb8d6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -851,7 +851,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.65
+  m_fontSize: 67.1
   m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -916,7 +916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ad252076a9dd748be17a62bd1d87b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxPontos: 5000
+  maxPontos: 15000
   pontos: 0
 --- !u!1 &896427480
 GameObject:
@@ -930,7 +930,7 @@ GameObject:
   - component: {fileID: 896427482}
   m_Layer: 0
   m_Name: MainBackGround
-  m_TagString: Fundo
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -945,7 +945,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 38.399998, y: 52.29, z: 0.5}
+  m_LocalScale: {x: 15, y: 9, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 519420032}
@@ -999,11 +999,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1000
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -6577359719454354084, guid: 15abe6b96815c8b468f422310a6cba17, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0, g: 0.5388587, b: 0.68235296, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
@@ -1240,37 +1240,6 @@ SpriteShapeRenderer:
     m_Center: {x: 0.6126151, y: 0.39183903, z: 0}
     m_Extent: {x: 3.3282769, y: 2.2352824, z: 0}
   m_SpriteSortPoint: 0
---- !u!1 &974200496
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 974200497}
-  m_Layer: 0
-  m_Name: Local 1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &974200497
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 974200496}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.04, y: 1.45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028545201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,7 +1794,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 150, y: 150}
+  m_Size: {x: 200, y: 200}
   m_EdgeRadius: 1
 --- !u!4 &1368859692
 Transform:
@@ -2454,4 +2423,3 @@ SceneRoots:
   - {fileID: 1268613920}
   - {fileID: 1368859692}
   - {fileID: 783819363}
-  - {fileID: 974200497}
