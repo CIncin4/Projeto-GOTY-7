@@ -266,3 +266,4 @@ MonoBehaviour:
   vida: 0
   isCollectable: 1
   valor: 10
+  destroySFX: {fileID: 8300000, guid: 05a50078a887f934f976540fe64aace8, type: 3}

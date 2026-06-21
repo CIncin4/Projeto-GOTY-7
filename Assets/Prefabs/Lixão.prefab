@@ -264,3 +264,6 @@ MonoBehaviour:
   drop: {fileID: 198347123989815665, guid: 5ee6d5852dba62a40b3195c3bef8ee51, type: 3}
   dropAmount: 3
   vida: 1000
+  isCollectable: 0
+  valor: 0
+  destroySFX: {fileID: 8300000, guid: 34d3956ace3558c4f8f598449690ca77, type: 3}

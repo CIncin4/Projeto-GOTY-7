@@ -10,6 +10,7 @@ public class Lixo : MonoBehaviour
     [SerializeField] private float vida;
     [SerializeField] private bool isCollectable;
     [SerializeField] private int valor;
+    [SerializeField] private AudioClip destroySFX;
     private Transform tr;
 
     private void Start()
@@ -32,6 +33,7 @@ public class Lixo : MonoBehaviour
         {
             vida = vida - collision.gameObject.GetComponent<Projectile_logic>().dano;
             if (vida <= 0){
+                AudioSource.PlayClipAtPoint(destroySFX, tr.position, 1f);
                 Destroy(this.gameObject);
                 if (dropAmount > 0 && drop != null){
                     for (int i = 0; i < dropAmount; i++)
@@ -39,8 +41,8 @@ public class Lixo : MonoBehaviour
                 }
             }
         }
-        else if (collision.gameObject.CompareTag("Coletor") && isCollectable)
-        {
+        else if (collision.gameObject.CompareTag("Coletor") && isCollectable){
+            AudioSource.PlayClipAtPoint(destroySFX, tr.position, 1f);
             display.GetComponent<ContadorPNT>().pontos = display.GetComponent<ContadorPNT>().pontos + valor;
             Destroy(this.gameObject);
         }

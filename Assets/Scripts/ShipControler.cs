@@ -44,6 +44,7 @@ public class ShipControl : MonoBehaviour
     {
         cooldown = false;
         Instantiate(bala, tr.position, tr.rotation);
+        GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(shootingSpeed);
         cooldown = true;
     }
