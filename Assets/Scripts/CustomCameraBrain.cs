@@ -22,8 +22,8 @@ public class CustomCameraBrain : MonoBehaviour
             transform.position = new Vector3(ptr.position.x, ptr.position.y, -20);
             if (Input.GetKeyDown(KeyCode.M)) minimized = false;
         } else {
-            minimap.rectTransform.anchoredPosition = new Vector3(400, -400, 0);
-            minimap.rectTransform.localScale = new Vector3(800, 800, 0);
+            minimap.rectTransform.anchoredPosition = new Vector3(300, -300, 0);
+            minimap.rectTransform.localScale = new Vector3(600, 600, 0);
             cam.orthographicSize = 40;
             if (Input.GetKeyDown(KeyCode.M)) minimized = true;
             if (Keyboard.current.upArrowKey.isPressed || Keyboard.current.wKey.isPressed) transform.Translate(0, 30 * Time.deltaTime, 0);
