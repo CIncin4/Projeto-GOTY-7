@@ -1286,6 +1286,7 @@ GameObject:
   - component: {fileID: 8720196481458155297}
   - component: {fileID: 1641638869662869811}
   - component: {fileID: 8108449239738532617}
+  - component: {fileID: 4306263788941096132}
   m_Layer: 7
   m_Name: Player Ship
   m_TagString: Untagged
@@ -1402,7 +1403,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDamping: 1
-  m_AngularDamping: 0.05
+  m_AngularDamping: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -6368,6 +6369,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8266602192558754437}
   m_Enabled: 1
+--- !u!114 &4306263788941096132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8266602192558754437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e5f7293c23a154d9eee0860a1885ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  objectIndex: 0
 --- !u!1 &8943584414759263684
 GameObject:
   m_ObjectHideFlags: 0
