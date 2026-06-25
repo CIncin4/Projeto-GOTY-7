@@ -825,7 +825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8923032000094504988}
-  - component: {fileID: 1900075403222032567}
+  - component: {fileID: 7581573313068447682}
   - component: {fileID: 4853692336036242537}
   - component: {fileID: 6569270615692032795}
   m_Layer: 5
@@ -854,7 +854,7 @@ RectTransform:
   m_AnchoredPosition: {x: -500, y: -75}
   m_SizeDelta: {x: 900, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1900075403222032567
+--- !u!114 &7581573313068447682
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -865,8 +865,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61ad252076a9dd748be17a62bd1d87b6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
-  maxPontos: 5000
+  m_EditorClassIdentifier: Assembly-CSharp::ContadorPNT
+  money: 0
   pontos: 0
 --- !u!222 &4853692336036242537
 CanvasRenderer:
@@ -1383,8 +1383,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6012659fe99cbc438c9f5189546b848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 60
-  shootingSpeed: 0.25
+  speed: 1
+  shootingSpeed: 1
+  damage: 1
   bala: {fileID: 2228550643228650346, guid: 66cd6da22802d364a8b796d2a7d6e198, type: 3}
 --- !u!50 &3792514954867228444
 Rigidbody2D:

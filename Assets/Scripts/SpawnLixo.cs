@@ -1,4 +1,4 @@
-using UnityEngine;
+/*using UnityEngine;
 
 public class SpawnLixo : MonoBehaviour
 {
@@ -71,4 +71,4 @@ public class SpawnLixo : MonoBehaviour
 
         return new Vector2(posX, posY);
     }
-}
+}*/
