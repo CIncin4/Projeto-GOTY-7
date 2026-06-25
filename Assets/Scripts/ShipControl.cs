@@ -6,45 +6,52 @@ using UnityEngine.InputSystem;
 
 public class ShipControl : MonoBehaviour
 {
+    public static ShipControl instance;
+
     private Transform tr;
     private Rigidbody2D rb;
     private Camera mainCam;
-    private Vector3 mousePos;
     private bool cooldown = true;
-    [SerializeField] private float speed;
-    [SerializeField] private float shootingSpeed;
+    public float speed;
+    public float shootingSpeed;
+    public float damage;
     [SerializeField] private GameObject bala;
     private GameObject coletor;
 
-    void Start(){
+    private void Awake()
+    {
+        if (instance  == null) instance = this;
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         mainCam = Camera.main;
         coletor = GameObject.FindWithTag("Coletor");
+
     }
 
     private void LookAtMouse(){
-        mousePos = (Vector2)mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mouseDistance = mousePos - tr.position;
+        Vector2 mouseDistance = (Vector3)mainCam.ScreenToWorldPoint(Input.mousePosition) - tr.position;
         float rotZ = (Mathf.Atan2(mouseDistance.y, mouseDistance.x) * Mathf.Rad2Deg) - 90;
-
         rb.transform.rotation = Quaternion.Euler(0, 0, rotZ);
     }
 
     private void Propell(){
         float ang;
-
         ang = tr.eulerAngles.z / 180 * math.PI;
-
-        Vector3 vect = new Vector3((speed * Mathf.Sin(-ang)), (speed * Mathf.Cos(-ang)));
+        Vector3 vect = new Vector3((speed * 100 * Mathf.Sin(-ang)), (speed * 100 * Mathf.Cos(-ang)));
         rb.AddForce(vect);
+        rb.linearDamping = 1f + speed;
     }
 
     private IEnumerator Shoot()
     {
         cooldown = false;
         Instantiate(bala, tr.position, tr.rotation);
+<<<<<<< Updated upstream:Assets/Scripts/ShipControler.cs
         yield return new WaitForSeconds(shootingSpeed);
+=======
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(0.5f / shootingSpeed);
+>>>>>>> Stashed changes:Assets/Scripts/ShipControl.cs
         cooldown = true;
     }
 

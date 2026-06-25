@@ -107,8 +107,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   bulletSpeed: 7.5
+<<<<<<< Updated upstream
   bulletLifeSpan: 3
   dano: 100
+=======
+  bulletLifeSpan: 5
+  dano: 25
+>>>>>>> Stashed changes
 --- !u!61 &5553467379939010640
 BoxCollider2D:
   m_ObjectHideFlags: 0

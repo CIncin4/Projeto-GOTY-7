@@ -107,8 +107,13 @@ GameObject:
   - component: {fileID: 8633884289498519751}
   - component: {fileID: 5344332881359823328}
   m_Layer: 7
+<<<<<<< Updated upstream:Assets/Prefabs/PlayerShip.prefab
   m_Name: PlayerShip
   m_TagString: Untagged
+=======
+  m_Name: Player Ship
+  m_TagString: Player
+>>>>>>> Stashed changes:Assets/Prefabs/Player Ship.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,8 +207,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6012659fe99cbc438c9f5189546b848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+<<<<<<< Updated upstream:Assets/Prefabs/PlayerShip.prefab
   speed: 30
   shootingSpeed: 0.2
+=======
+  speed: 1
+  shootingSpeed: 1
+  damage: 1
+>>>>>>> Stashed changes:Assets/Prefabs/Player Ship.prefab
   bala: {fileID: 2228550643228650346, guid: 66cd6da22802d364a8b796d2a7d6e198, type: 3}
 --- !u!50 &731392529277033113
 Rigidbody2D:

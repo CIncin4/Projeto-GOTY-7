@@ -8,7 +8,9 @@ public class Projectile_logic : MonoBehaviour
     [SerializeField] private float bulletLifeSpan;
     public float dano;
 
-    private void Start(){
+    private void Awake()
+    {
+        dano = ShipControl.instance.damage * 10;
         StartCoroutine(Lifespan());
     }
 
@@ -17,7 +19,7 @@ public class Projectile_logic : MonoBehaviour
     }
 
     private void Update(){
-        transform.Translate(0, bulletSpeed * Time.deltaTime, 0);
+        transform.Translate(0, (bulletSpeed + (bulletSpeed * (ShipControl.instance.speed / 5))) * Time.deltaTime, 0);
     }
 
     private IEnumerator Lifespan(){
