@@ -15,6 +15,7 @@ public class ShipControl : MonoBehaviour
     public float speed;
     public float shootingSpeed;
     public float damage;
+    public bool ativo = true;
     [SerializeField] private GameObject bala;
     [SerializeField] private GameObject dmgDrop;
     private GameObject coletor;
@@ -28,6 +29,18 @@ public class ShipControl : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         mainCam = Camera.main;
         coletor = GameObject.FindWithTag("Coletor");
+    }
+
+    private void Start()
+    {
+        Restart();
+    }
+
+    public void Restart()
+    {
+        display.UpdateScore();
+        tr.position = Vector3.zero;
+        ativo = true;
     }
 
     private void LookAtMouse()
@@ -71,22 +84,28 @@ public class ShipControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LookAtMouse();
-        if (Keyboard.current.spaceKey.isPressed) Propell();
+        if (ativo)
+        {
+            LookAtMouse();
+            if (Keyboard.current.spaceKey.isPressed) Propell();
+        }
     }
 
     private void Update()
     {
-        if (Mouse.current.leftButton.isPressed & cooldown == true && !Mouse.current.rightButton.isPressed) StartCoroutine(Shoot());
-        if (Mouse.current.rightButton.isPressed)
+        if (ativo)
         {
-            coletor.GetComponent<PolygonCollider2D>().enabled = true;
-            coletor.GetComponent<SpriteRenderer>().enabled = true;
-        }
-        else
-        {
-            coletor.GetComponent<PolygonCollider2D>().enabled = false;
-            coletor.GetComponent<SpriteRenderer>().enabled = false;
+            if (Mouse.current.leftButton.isPressed & cooldown == true && !Mouse.current.rightButton.isPressed) StartCoroutine(Shoot());
+            if (Mouse.current.rightButton.isPressed)
+            {
+                coletor.GetComponent<PolygonCollider2D>().enabled = true;
+                coletor.GetComponent<SpriteRenderer>().enabled = true;
+            }
+            else
+            {
+                coletor.GetComponent<PolygonCollider2D>().enabled = false;
+                coletor.GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
     }
 }

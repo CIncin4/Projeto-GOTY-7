@@ -23,7 +23,7 @@ public class ContadorPNT : MonoBehaviour
         txmp = GetComponent<TextMeshProUGUI>();
     }
 
-    private void UpdateScore()
+    public void UpdateScore()
     {
         fundo.color = colorPNT;
         txmp.text = pontos + " kg";

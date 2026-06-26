@@ -11,6 +11,8 @@ public class SaidaFase : MonoBehaviour
         {
             GameManager.proximoLevelIndex = indexDesteProximoLevel;
 
+            ShipControl.instance.ativo = false;
+
             SceneManager.LoadScene("Loja");
         }
     }
