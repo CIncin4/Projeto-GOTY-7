@@ -41,7 +41,7 @@ public class LojaManager : MonoBehaviour
 
     public void IrParaProximoPlaneta()
     {
-        SceneManager.LoadScene(GameManager.proximoLevelIndex);
-        ShipControl.instance.Restart();
+        SceneManager.LoadScene(GameManager.proximoLevel);
+        ShipControl.instance.Reset();
     }
 }

@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 1963197005806637920}
   - component: {fileID: 6871265855195045758}
   - component: {fileID: 2742990829617325073}
-  - component: {fileID: 3737056078737420988}
+  - component: {fileID: 2512574812791285173}
   m_Layer: 0
   m_Name: Main CinemachineCamera
   m_TagString: MainCamera
@@ -221,7 +221,7 @@ MonoBehaviour:
     MaxWindowSize: 0
     Padding: 0
   m_LegacyMaxWindowSize: -2
---- !u!114 &3737056078737420988
+--- !u!114 &2512574812791285173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

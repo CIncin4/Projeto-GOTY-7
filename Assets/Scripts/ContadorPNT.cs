@@ -29,6 +29,12 @@ public class ContadorPNT : MonoBehaviour
         txmp.text = pontos + " kg";
     }
 
+    public void ResetScore()
+    {
+        pontos = 0;
+        UpdateScore();
+    }
+
     private void UpdateMoney()
     {
         fundo.color = colorMNY;

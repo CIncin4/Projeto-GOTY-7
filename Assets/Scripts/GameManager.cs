@@ -2,5 +2,5 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static int proximoLevelIndex = 4;
+    public static string proximoLevel;
 }
