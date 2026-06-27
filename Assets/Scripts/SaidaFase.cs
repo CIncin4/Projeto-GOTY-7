@@ -4,14 +4,27 @@ using UnityEngine.SceneManagement;
 public class SaidaFase : MonoBehaviour
 {
     [Header("Configuração de Fluxo")]
-    [SerializeField] private int indexDesteProximoLevel; 
-    private void OnTriggerEnter2D(Collider2D colisao)
+    [SerializeField] private string esteProximoLevel;
+
+    private void OnTriggerExit2D(Collider2D colisao)
     {
         if (colisao.CompareTag("Player"))
         {
-            GameManager.proximoLevelIndex = indexDesteProximoLevel;
-
-            SceneManager.LoadScene("Loja");
+            if (!ShipControl.instance.restartCheck)
+            {
+                ShipControl.instance.Stop();
+                Invoke("PassarFase", 2f);
+            }
+            else
+            {
+                ShipControl.instance.restartCheck = false;
+            }
         }
+    }
+
+    private void PassarFase()
+    {
+        GameManager.proximoLevel = esteProximoLevel;
+        SceneManager.LoadScene("Loja");
     }
 }

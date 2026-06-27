@@ -1,8 +1,11 @@
 using System.Collections;
+using Unity.Cinemachine;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class ShipControl : MonoBehaviour
 {
@@ -11,12 +14,16 @@ public class ShipControl : MonoBehaviour
     private Transform tr;
     private Rigidbody2D rb;
     private Camera mainCam;
+    private Transform strtpnt;
     private bool cooldown = true;
     public float speed;
     public float shootingSpeed;
     public float damage;
+    private bool ativo = true;
+    public bool restartCheck = false;
     [SerializeField] private GameObject bala;
     [SerializeField] private GameObject dmgDrop;
+    [SerializeField] private Timer timer;
     private GameObject coletor;
     private ContadorPNT display;
 
@@ -27,7 +34,41 @@ public class ShipControl : MonoBehaviour
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         mainCam = Camera.main;
+        strtpnt = GameObject.FindWithTag("StartPoint").transform;
         coletor = GameObject.FindWithTag("Coletor");
+        timer.RestartTimer();
+        if(strtpnt != null)
+            tr.position = strtpnt.position;
+    }
+
+    private void Continue()
+    {
+        timer.Go();
+        display.UpdateScore();
+        ativo = true;
+    }
+
+    public void Restart()
+    {
+        restartCheck = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Reset();
+    }
+
+    public void Reset()
+    {
+        strtpnt = GameObject.FindWithTag("StartPoint").transform;
+        if (strtpnt != null)
+            tr.position = strtpnt.position;
+        display.ResetScore();
+        timer.RestartTimer();
+        Continue();
+    }
+
+    public void Stop()
+    {
+        ativo = false;
+        timer.Stop();
     }
 
     private void LookAtMouse()
@@ -71,22 +112,28 @@ public class ShipControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        LookAtMouse();
-        if (Keyboard.current.spaceKey.isPressed) Propell();
+        if (ativo)
+        {
+            LookAtMouse();
+            if (Keyboard.current.spaceKey.isPressed) Propell();
+        }
     }
 
     private void Update()
     {
-        if (Mouse.current.leftButton.isPressed & cooldown == true && !Mouse.current.rightButton.isPressed) StartCoroutine(Shoot());
-        if (Mouse.current.rightButton.isPressed)
+        if (ativo)
         {
-            coletor.GetComponent<PolygonCollider2D>().enabled = true;
-            coletor.GetComponent<SpriteRenderer>().enabled = true;
-        }
-        else
-        {
-            coletor.GetComponent<PolygonCollider2D>().enabled = false;
-            coletor.GetComponent<SpriteRenderer>().enabled = false;
+            if (Mouse.current.leftButton.isPressed & cooldown == true && !Mouse.current.rightButton.isPressed) StartCoroutine(Shoot());
+            if (Mouse.current.rightButton.isPressed)
+            {
+                coletor.GetComponent<PolygonCollider2D>().enabled = true;
+                coletor.GetComponent<SpriteRenderer>().enabled = true;
+            }
+            else
+            {
+                coletor.GetComponent<PolygonCollider2D>().enabled = false;
+                coletor.GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
     }
 }

@@ -31,19 +31,17 @@ public class LojaManager : MonoBehaviour
         }
     }
 
-    private GameObject nave;
-
     private ContadorPNT display;
     private void Awake()
     {
         display = GameObject.Find("DisplayPontos").GetComponent<ContadorPNT>();
-        nave = GameObject.FindGameObjectWithTag("Player");
         display.ConvertToMoney();
     }
     
 
     public void IrParaProximoPlaneta()
     {
-        SceneManager.LoadScene(GameManager.proximoLevelIndex);
+        SceneManager.LoadScene(GameManager.proximoLevel);
+        ShipControl.instance.Reset();
     }
 }
