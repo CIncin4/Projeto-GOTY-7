@@ -19,7 +19,7 @@ public class CustomCameraBrain : MonoBehaviour
             minimap.rectTransform.anchoredPosition = new Vector3(200, -200, 0);
             minimap.rectTransform.localScale = new Vector3(400, 400, 0);
             cam.orthographicSize = 15;
-            transform.position = new Vector3(ptr.position.x, ptr.position.y, -20);
+            transform.position = new Vector3(ptr.position.x, ptr.position.y, -30);
             if (Input.GetKeyDown(KeyCode.M)) minimized = false;
         } else {
             minimap.rectTransform.anchoredPosition = new Vector3(300, -300, 0);

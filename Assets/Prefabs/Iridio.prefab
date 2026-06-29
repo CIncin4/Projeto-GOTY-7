@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.27058825, g: 0.7254902, b: 0.85098046, a: 1}
+  m_Color: {r: 0.8509804, g: 0.2705883, b: 0.7091774, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Coletavel
   colectSFX: {fileID: 8300000, guid: 05a50078a887f934f976540fe64aace8, type: 3}
   tempoDespawn: 10
-  valor: 50
+  valor: 150
 --- !u!212 &1764527574016095802
 SpriteRenderer:
   serializedVersion: 2

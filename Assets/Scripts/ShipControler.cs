@@ -24,6 +24,7 @@ public class ShipControl : MonoBehaviour
     [SerializeField] private GameObject bala;
     [SerializeField] private GameObject dmgDrop;
     [SerializeField] private Timer timer;
+    [SerializeField] private Transform pontoDeTiro;
     private AudioSource music;
     private GameObject coletor;
     private ContadorPNT display;
@@ -94,7 +95,7 @@ public class ShipControl : MonoBehaviour
     private IEnumerator Shoot()
     {
         cooldown = false;
-        GameObject temp = Instantiate(bala, tr.position, tr.rotation);
+        GameObject temp = Instantiate(bala, pontoDeTiro.position, tr.rotation);
         temp.GetComponent<Projectile_logic>().dano = damage * 10;
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.1f + (0.4f / shootingSpeed));
