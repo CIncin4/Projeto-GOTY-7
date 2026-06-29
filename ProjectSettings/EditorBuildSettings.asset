@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFinal.unity
     guid: ac1b603a8fbaef245a40945dcf412592
+  - enabled: 1
+    path: Assets/Scenes/FinalCutscene.unity
+    guid: f2c841175ba0a43479b8dc7d35fcba18
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: a31837a97ee28594a94698fe7460d8bb, type: 3}
   m_UseUCBPForAssetBundles: 0
