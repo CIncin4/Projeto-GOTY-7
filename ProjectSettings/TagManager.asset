@@ -13,6 +13,7 @@ TagManager:
   - Bounds
   - Aim
   - StartPoint
+  - BossAim
   layers:
   - Default
   - TransparentFX
