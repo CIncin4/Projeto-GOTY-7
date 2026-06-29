@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   destroySFX: {fileID: 8300000, guid: 34d3956ace3558c4f8f598449690ca77, type: 3}
   drop: {fileID: 4121280241111691846, guid: 69be0237d1fd550409fc3b221f488403, type: 3}
-  dropAmount: 5
+  dropAmount: 7
   vida: 150
 --- !u!61 &4414257121449046332
 BoxCollider2D:
@@ -238,7 +238,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.2739409, g: 0.72744983, b: 0.8490566, a: 1}
+  m_Color: {r: 0.3137255, g: 0.85098046, b: 0.26666668, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

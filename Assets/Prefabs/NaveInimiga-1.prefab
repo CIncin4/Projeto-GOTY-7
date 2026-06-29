@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8958139850646315468}
   - component: {fileID: -7659518631906610908}
   m_Layer: 11
-  m_Name: NaveInimiga
+  m_Name: NaveInimiga-1
   m_TagString: Inimigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
   velocidade: 0.2
   prefabTiro: {fileID: 2228550643228650346, guid: dcda753acfac1994fa0a82a8e013c6ce, type: 3}
   pontoDeTiro: {fileID: 4867515448097046334}
-  tempoEntreTiros: 2
+  tempoEntreTiros: 1
   vida: 500
   drop: {fileID: 1702020042935437397, guid: fd146289d8a06ca41a6f8a4830350900, type: 3}
   dropAmount: 15
@@ -257,7 +257,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 149827952958971375}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 9}
+  m_LocalPosition: {x: 0, y: 0, z: 19}
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 311393801164409659}
   - component: {fileID: 6806950482892728757}
   - component: {fileID: 6224811319958901006}
-  m_Layer: 7
+  m_Layer: 13
   m_Name: Coletor
   m_TagString: Coletor
   m_Icon: {fileID: 0}
@@ -1066,6 +1066,37 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &6709776373671359547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7755618235023161990}
+  m_Layer: 7
+  m_Name: Ponto de tiro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7755618235023161990
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6709776373671359547}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4803879149318758096}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6819914377541801466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,6 +1592,7 @@ Transform:
   - {fileID: 5365441836044411587}
   - {fileID: 311393801164409659}
   - {fileID: 3216263669343482175}
+  - {fileID: 7755618235023161990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7779805777970063867
@@ -1641,6 +1673,7 @@ MonoBehaviour:
   bala: {fileID: 2228550643228650346, guid: 66cd6da22802d364a8b796d2a7d6e198, type: 3}
   dmgDrop: {fileID: 2261721316738200775, guid: 9ca6f1df748ef07488169a76358eedda, type: 3}
   timer: {fileID: 5231483125724938902}
+  pontoDeTiro: {fileID: 7755618235023161990}
 --- !u!50 &3792514954867228444
 Rigidbody2D:
   serializedVersion: 5

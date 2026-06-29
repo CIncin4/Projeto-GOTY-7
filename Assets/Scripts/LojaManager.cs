@@ -1,41 +1,48 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LojaManager : MonoBehaviour
 {
-    [SerializeField] private float custoArtilharia;
-    [SerializeField] private float custoVelocidade;
-    [SerializeField] private float custoCanhao;
+    [SerializeField] private float custoMelhoria;
     public void ComprarArtilharia()
     {
-        if (custoArtilharia < display.money)
+        if (custoMelhoria <= display.money)
         {
-            display.RemoveMoney(custoArtilharia);
+            display.RemoveMoney(custoMelhoria);
+            custoMelhoria = custoMelhoria + 1000;
             ShipControl.instance.shootingSpeed++;
+            preco.text = "Custo: " + custoMelhoria + "$";
         }
     }
     public void ComprarVelocidade()
     {
-        if (custoVelocidade < display.money)
+        if (custoMelhoria <= display.money)
         {
-            display.RemoveMoney(custoVelocidade);
+            display.RemoveMoney(custoMelhoria);
+            custoMelhoria = custoMelhoria + 1000;
             ShipControl.instance.speed++;
+            preco.text = "Custo: " + custoMelhoria + "$";
         }
     }
         public void ComprarCanhao()
     {
-        if (custoCanhao < display.money)
+        if (custoMelhoria <= display.money)
         {
-            display.RemoveMoney(custoCanhao);
+            display.RemoveMoney(custoMelhoria);
+            custoMelhoria = custoMelhoria + 1000;
             ShipControl.instance.damage++;
+            preco.text = "Custo: " + custoMelhoria + "$";
         }
     }
 
     private ContadorPNT display;
+    [SerializeField] private TextMeshProUGUI preco;
     private void Awake()
     {
         display = GameObject.Find("DisplayPontos").GetComponent<ContadorPNT>();
         display.ConvertToMoney();
+        preco.text = "Custo: " + custoMelhoria + "$";
     }
     
 
