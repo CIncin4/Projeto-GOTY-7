@@ -720,10 +720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926bc5eb8de9a394495e167c7a842377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinalManager
-  fundoImagem: {fileID: 0}
-  textoDialogo: {fileID: 0}
-  painelDialogo: {fileID: 0}
-  fadeOverlayGroup: {fileID: 0}
+  fundoImagem: {fileID: 883541877}
+  textoDialogo: {fileID: 410938815}
+  painelDialogo: {fileID: 624159668}
+  fadeOverlayGroup: {fileID: 1080556916}
   duracaoFadeOut: 1.5
   velocidadeDigitacao: 0.05
   delayInicial: 1

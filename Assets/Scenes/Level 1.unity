@@ -12893,11 +12893,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnControll
   spawnPoints:
   - {fileID: 791724990}
---- !u!4 &1560368199 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-  m_PrefabInstance: {fileID: 8111440855001701491}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1562685885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14491,7 +14486,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1560368199}
   - {fileID: 941591552}
   - {fileID: 166606039}
   - {fileID: 2119297658}
@@ -18374,63 +18368,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2adb8c6bf469b984391df37bfd4effc5, type: 3}
---- !u!1001 &8111440855001701491
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1712380923}
-    m_Modifications:
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 38.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2142263298024167553, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5051089633364332893, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
-      propertyPath: m_Name
-      value: FerroGrande
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 622ae76c84163de4db488c6e5ecba289, type: 3}
 --- !u!1001 &9005084314145027102
 PrefabInstance:
   m_ObjectHideFlags: 0

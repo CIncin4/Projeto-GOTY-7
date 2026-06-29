@@ -204,8 +204,8 @@ MonoBehaviour:
   pontoDeTiro: {fileID: 2829596324821148278}
   tempoEntreTiros: 4
   vida: 250
-  drop: {fileID: 4121280241111691846, guid: 69be0237d1fd550409fc3b221f488403, type: 3}
-  dropAmount: 2
+  drop: {fileID: 7378958989142242334, guid: ae9471d3017c40b429f47286c5740b3f, type: 3}
+  dropAmount: 1
 --- !u!50 &8418811199170408594
 Rigidbody2D:
   serializedVersion: 5
