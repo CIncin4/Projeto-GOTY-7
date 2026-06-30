@@ -13,6 +13,7 @@ public class Boss : MonoBehaviour
     private float vida;
     private Transform trTiro;
     private GameObject jogador;
+    private ContadorPNT display;
     private bool canShoot = false;
 
     private void Start()
@@ -20,6 +21,7 @@ public class Boss : MonoBehaviour
         trTiro = GameObject.FindGameObjectWithTag("BossAim").GetComponent<Transform>();
         jogador = GameObject.FindWithTag("Player");
         vida = vidaMax;
+        display = GameObject.Find("DisplayPontos").GetComponent<ContadorPNT>();
         canShoot = true;
     }
 
@@ -28,6 +30,7 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Projetil"))
         {
             vida -= collision.GetComponent<Projectile_logic>().dano;
+            display.MostarVida(vida, vidaMax);
             if (vida <= 0)
             {
                 Destroy(jogador);

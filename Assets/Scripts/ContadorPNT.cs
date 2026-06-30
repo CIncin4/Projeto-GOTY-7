@@ -15,7 +15,7 @@ public class ContadorPNT : MonoBehaviour
 
     private Color colorPNT = Color.cornflowerBlue;
     private Color colorMNY = Color.mediumSpringGreen;
-
+    private Color colorHP = Color.indianRed;
 
     void Start()
     {
@@ -76,5 +76,11 @@ public class ContadorPNT : MonoBehaviour
     public void RemoveMoney(float valor){
         money -= valor;
         UpdateMoney();
+    }
+
+    public void MostarVida(float vidaRestante, float vidaMassima)
+    {
+        fundo.color = colorHP;
+        txmp.text = vidaRestante + " / " + vidaMassima;
     }
 }
