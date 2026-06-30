@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boss : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Boss : MonoBehaviour
     [SerializeField] private GameObject bala;
     [SerializeField] private float moveSpeed;
     [SerializeField] private Transform[] waypoints;
+
     private int waypointIndex = 0;
     private float vida;
     private Transform trTiro;
@@ -26,8 +28,11 @@ public class Boss : MonoBehaviour
         if (collision.CompareTag("Projetil"))
         {
             vida -= collision.GetComponent<Projectile_logic>().dano;
-            if(vida <= 0)
+            if (vida <= 0)
             {
+                Destroy(jogador);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
                 Destroy(gameObject);
             }
         }
@@ -45,6 +50,7 @@ public class Boss : MonoBehaviour
             StartCoroutine(Shoot());
         }
     }
+
     private void Move()
     {
         if (waypointIndex <= waypoints.Length - 1)
@@ -69,7 +75,8 @@ public class Boss : MonoBehaviour
         canShoot = false;
         if (bala != null)
             Instantiate(bala, trTiro.position, trTiro.rotation);
+
         yield return new WaitForSeconds(0.1f + (10f * (vida / vidaMax)));
-        canShoot=true;
+        canShoot = true;
     }
 }

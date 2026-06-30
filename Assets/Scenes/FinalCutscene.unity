@@ -203,8 +203,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -728,11 +728,12 @@ MonoBehaviour:
   velocidadeDigitacao: 0.05
   delayInicial: 1
   imagens:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 2572763967821530034, guid: 1ce3c23a36da3914498a813bf653e079, type: 3}
   dialogos:
-  - 
-  - 
+  - "O destruidor de planetas explode de dentro para fora, despeda\xE7ando-se no
+    vazio c\xF3smico. A amea\xE7a acabou; a tripula\xE7\xE3o est\xE1 a salvo, e o
+    legado da gal\xE1xia agora vive eterno no c\xF3digo."
+  - "Tudo gra\xE7as \xE0 pequena GOTY-7!! "
 --- !u!4 &2021173653
 Transform:
   m_ObjectHideFlags: 0

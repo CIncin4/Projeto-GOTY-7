@@ -244,17 +244,19 @@ MonoBehaviour:
   velocidadeDigitacao: 0.05
   delayInicial: 1
   imagens:
-  - {fileID: -5448586323404487606, guid: 84f9b09fc2b805649936f71a41ed56af, type: 3}
-  - {fileID: -5448586323404487606, guid: 84f9b09fc2b805649936f71a41ed56af, type: 3}
   - {fileID: -2356313758267876560, guid: 7ad729ec3de793e44a1dcfa58afd3e55, type: 3}
   - {fileID: -2356313758267876560, guid: 7ad729ec3de793e44a1dcfa58afd3e55, type: 3}
+  - {fileID: 7147945121163895787, guid: 0171f73f23b15f643bc19a601b726101, type: 3}
   dialogos:
-  - 'Os planetas se enchem cada vez mais de lixo pelos seus habitantes. '
-  - "Mal feitores contribuem para que a polui\xE7\xE3o esteja completa o mais r\xE1pido
-    poss\xEDvel."
-  - "S\xF3 a Goty-7 pode impedir. "
-  - "Chegou a hora de salvar o planeta do perigo iminente que a polui\xE7\xE3o e
-    os mal feitores estam causando!"
+  - "06:00 da manh\xE3 no ciclo padr\xE3o. O hor\xE1rio exato em que a disciplina
+    inabal\xE1vel dos pilotos despertava. No conv\xE9s de comando da GOTY-7, o sil\xEAncio
+    habitual durou pouco: as telas acenderam com o brilho de um alerta vermelho cont\xEDnuo."
+  - "A anomalia foi confirmada. Eles o chamam de O Devorador. Uma estrutura mec\xE2nica
+    colossal que fratura planetas e suga sua energia, apagando sistemas inteiros
+    do mapa."
+  - "Sem for\xE7as armadas a tempo, estamos sozinhos em uma corrida contra a extin\xE7\xE3o.
+    Nossa \xFAnica op\xE7\xE3o \xE9 saltar \xE0 frente do monstro, alcan\xE7ando
+    os mundos antes que sejam destru\xEDdos."
 --- !u!4 &197267809
 Transform:
   m_ObjectHideFlags: 0
@@ -593,8 +595,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 60
-  m_fontSizeBase: 60
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
